@@ -1,0 +1,22 @@
+{
+  "name": "tpt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "verbose": true
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.0.1"
+  },
+  "dependencies": {
+    "eslint-config-airbnb-base": "^14.1.0",
+    "minimist": "^1.2.5"
+  }
+}
