@@ -30,8 +30,13 @@ const apiElementCalculatorGenerator = ({percents, ...otherRules}) => {
     return transaction => calculator(transaction).toFixed(2)
 }
 
+exports.default = apiElementCalculatorGenerator
 
-//Data persistence
+
+
+
+
+//Data persistence for week_limit calculation
 
 function generateUserWeeklyPersistence() {
     const cache = {}
@@ -52,4 +57,3 @@ function getMonday(dateStr) {
     return date.setDate(date.getDate() - (date.getDay() + 6) % 7)
 }
 
-exports.default = apiElementCalculatorGenerator

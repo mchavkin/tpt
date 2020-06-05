@@ -1,56 +1,55 @@
 const apiElementCalculatorGenerator = require('./apiElementCalculatorGenerator').default
-const EUR = "EUR"
 const input =
     [
         {
             date: "2016-01-05",
             user_id: 1,
-            operation: {amount: 200.00, currency: EUR}
+            operation: {amount: 200.00, currency: "EUR"}
         },
         {
             date: "2016-01-06",
             user_id: 2,
-            operation: {amount: 500.00, currency: EUR}
+            operation: {amount: 500.00, currency: "EUR"}
         },
         {
             date: "2016-01-06",
             user_id: 1,
-            operation: {amount: 30001, currency: EUR}
+            operation: {amount: 30001, currency: "EUR"}
         },
         {
             date: "2016-01-07",
             user_id: 1,
-            operation: {amount: 1000.04, currency: EUR}
+            operation: {amount: 1000.04, currency: "EUR"}
         },
         {
             date: "2016-01-07",
             user_id: 1,
-            operation: {amount: 700.00, currency: EUR}
+            operation: {amount: 700.00, currency: "EUR"}
         },
         {
             date: "2016-01-08",
             user_id: 1,
-            operation: {amount: 150.00, currency: EUR}
+            operation: {amount: 150.00, currency: "EUR"}
         },
         {
             date: "2016-01-09",
             user_id: 2,
-            operation: {amount: 1001000.00, currency: EUR}
+            operation: {amount: 1001000.00, currency: "EUR"}
         },
         {
             date: "2016-01-10",
             user_id: 3,
-            operation: {amount: 1000.00, currency: EUR}
+            operation: {amount: 1000.00, currency: "EUR"}
         },
         {
             date: "2016-01-10",
             user_id: 1,
-            operation: {amount: 300.00, currency: EUR}
+            operation: {amount: 300.00, currency: "EUR"}
         },
         {
             date: "2016-01-11",
             user_id: 1,
-            operation: {amount: 300.00, currency: EUR}
+            operation: {amount: 300.00, currency: "EUR"}
         }
     ]
 
