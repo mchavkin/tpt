@@ -14,25 +14,15 @@ const getApi = () => {
     ],
   });
 
-  return Promise.all(
-    [
-      CASH_IN_API_URL,
-      CASH_OUT_NATURAL_API_URL,
-      CASH_OUT_JURIDICAL_API_URL,
-    ].map(client.get),
-  ).then((
-    [
-      cashInApi,
-      cashOutNaturalApi,
-      cashOutJuridicalApi,
-    ],
-  ) => ({
-    cashIn: cashInApi.data,
-    cashOut: {
-      natural: cashOutNaturalApi.data,
-      juridical: cashOutJuridicalApi.data,
-    },
-  }));
+  return Promise.all([CASH_IN_API_URL, CASH_OUT_NATURAL_API_URL, CASH_OUT_JURIDICAL_API_URL]
+    .map(client.get))
+    .then(([cashInApi, cashOutNaturalApi, cashOutJuridicalApi]) => ({
+      cashIn: cashInApi.data,
+      cashOut: {
+        natural: cashOutNaturalApi.data,
+        juridical: cashOutJuridicalApi.data,
+      },
+    }));
 };
 
 exports.getApi = getApi;
