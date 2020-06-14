@@ -1,7 +1,8 @@
 const persistence = require('../persistence/persistence');
 
-const percentsCalculatorGenerator = (percents) =>
-  ({ operation }) => 0.01 * Math.ceil(percents * operation.amount);
+const percentsCalculatorGenerator = (percents) => (
+  ({ operation }) => 0.01 * Math.ceil(percents * operation.amount)
+);
 
 const rulesAdditionGenerator = {
   weekLimit: (weekLimit) => {
@@ -17,10 +18,12 @@ const rulesAdditionGenerator = {
       });
     };
   },
-  min: (min) => (initialCalculator) =>
-    (transaction) => Math.max(min.amount, initialCalculator(transaction)),
-  max: (max) => (initialCalculator) =>
-    (transaction) => Math.min(max.amount, initialCalculator(transaction)),
+  min: (min) => (initialCalculator) => (
+    (transaction) => Math.max(min.amount, initialCalculator(transaction))
+  ),
+  max: (max) => (initialCalculator) => (
+    (transaction) => Math.min(max.amount, initialCalculator(transaction))
+  ),
 };
 
 const apiElementCalculatorGenerator = ({ percents, ...otherRules }) => {
